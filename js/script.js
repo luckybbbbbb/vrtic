@@ -14,7 +14,7 @@
     if (!header || !navToggle || !siteNav) return;
     header.classList.remove("is-open");
     navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Open menu");
+    navToggle.setAttribute("aria-label", "Otvori meni");
     document.body.style.overflow = "";
   }
 
@@ -22,7 +22,7 @@
     if (!header || !navToggle || !siteNav) return;
     header.classList.add("is-open");
     navToggle.setAttribute("aria-expanded", "true");
-    navToggle.setAttribute("aria-label", "Close menu");
+    navToggle.setAttribute("aria-label", "Zatvori meni");
     document.body.style.overflow = "hidden";
   }
 
@@ -113,7 +113,7 @@
 
     var nameVal = nameInput ? nameInput.value.trim() : "";
     if (!nameVal) {
-      setError(nameInput, nameError, "Please enter your name.");
+      setError(nameInput, nameError, "Unesite ime i prezime.");
       valid = false;
     } else {
       setError(nameInput, nameError, "");
@@ -121,10 +121,10 @@
 
     var emailVal = emailInput ? emailInput.value.trim() : "";
     if (!emailVal) {
-      setError(emailInput, emailError, "Please enter your email.");
+      setError(emailInput, emailError, "Unesite adresu e-pošte.");
       valid = false;
     } else if (!emailPattern.test(emailVal)) {
-      setError(emailInput, emailError, "Please enter a valid email address.");
+      setError(emailInput, emailError, "Unesite ispravnu adresu e-pošte.");
       valid = false;
     } else {
       setError(emailInput, emailError, "");
@@ -132,7 +132,7 @@
 
     var messageVal = messageInput ? messageInput.value.trim() : "";
     if (!messageVal) {
-      setError(messageInput, messageError, "Please enter a message.");
+      setError(messageInput, messageError, "Unesite poruku.");
       valid = false;
     } else {
       setError(messageInput, messageError, "");
@@ -203,7 +203,7 @@
   galleryButtons.forEach(function (btn, index) {
     var img = btn.querySelector("img");
     if (img) {
-      galleryImages.push({ src: img.src, alt: img.alt || "Gallery image" });
+      galleryImages.push({ src: img.src, alt: img.alt || "Slika iz galerije" });
     }
     btn.addEventListener("click", function () {
       openLightbox(index);
